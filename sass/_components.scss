@@ -1,0 +1,348 @@
+
+.btn {
+    width: 23.4rem;
+    height: 6rem;
+    border-radius: 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #292D32;
+}
+
+.btn--white {
+    background-color: #ffffff;
+}
+
+.btn--transparent {
+    border: 1px solid #D6D6D6;
+}
+
+.btn--black {
+    background-color: rgba(41, 45, 50, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #292D32;
+}
+
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #292D32;
+}
+
+
+.control {
+
+    &__wrap {
+        width: 34rem;
+    }
+    
+    &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+    }
+    
+    &__fraction {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #777777;
+        
+        .swiper-pagination-current {
+            font-size: 4rem;
+            font-weight: 400;
+            color: #292D32;
+            margin-right: 1.3rem;
+        }
+
+        .swiper-pagination-total {
+            margin-left: 0.8rem;
+        }
+    }
+   
+    
+    &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 7.1rem;
+        margin-top: 2rem;
+    }
+    
+    
+    &__arrow-prew {
+        width: 2.4rem;
+        height: 2rem;
+        cursor: pointer;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    
+    }
+    
+    &__arrow-next {
+        width: 2.4rem;
+        height: 2rem;
+        cursor: pointer;
+
+    
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    
+    &__pagination {
+    
+    }
+
+    &__scrollbar {
+        width: 34rem;
+        height: 0.1rem;
+        background: rgba(119, 119, 119, 0.3);
+
+         .swiper-scrollbar-drag {
+            height: 0.2rem;
+            background: #C81F41;
+         }
+    }
+    
+}
+
+
+.breadcrumbs {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #292D32;
+
+    margin-bottom: 5.5rem;
+
+
+    a {
+        position: relative;
+        line-height: 1.5;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+
+        &:not(:first-child) {
+
+            &::before {
+                content: ">";
+                font-size: 1.6rem;
+
+                position: absolute;
+                left: -2.4rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &:last-child {
+            color: #777777;
+        }
+    }
+}
+
+
+
+
+.select {
+    position: relative;
+    width: 30rem;
+    border-bottom: 1.5px solid #D6D6D6;
+    height: 6rem;
+    display: flex;
+
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        margin-top: auto;
+        cursor: pointer;
+
+        svg {
+            stroke: #292D32;
+        }
+    }
+
+    &__current {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: rgba(41, 45, 50, 1);
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0px 34px 80px rgb(41 39 41 / 10%);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+        display: none;
+    }
+
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        font-size: 1.6rem;
+        height: 4rem;
+        color: rgba(41, 45, 50, 1);
+        cursor: pointer;
+    }
+
+    &.is-active  {
+        .select__body {
+            display: flex;
+        }
+
+        .select__header {
+            svg {
+                stroke:  #06A4D9;
+            }
+        }
+
+        .select__arrow {
+            transform: rotateX(180deg);
+        }
+    }
+}
+
+
+
+@media (max-width: 48em) {
+    .btn {
+        width: 34rem;
+        height: 9rem;
+        border-radius: 12rem;
+    
+        font-size: 2.8rem;
+    }
+
+    .title {
+        font-size: 5rem;
+    }
+    
+    
+    .subtitle {
+        font-size: 3rem;
+    }
+    
+
+
+    .control {
+
+        &__wrap {
+            width: 100%;
+        }
+        
+        &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 98%;
+        margin-bottom: 2rem;
+        }
+        
+        &__fraction {
+            font-size: 3rem;
+            font-weight: 400;
+            color: #777777;
+            
+            .swiper-pagination-current {
+                font-size: 5.6rem;
+                margin-right: 1.3rem;
+            }
+    
+            .swiper-pagination-total {
+                margin-left: 0.8rem;
+            }
+        }
+       
+        
+        &__arrows {
+            width: 12rem;
+            margin-top: 3rem;
+        }
+        
+        
+        &__arrow-prew {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+        
+        &__arrow-next {
+            width: 3.2rem;
+            height: 3.2rem;
+            cursor: pointer;
+    
+        
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        
+        &__pagination {
+        
+        }
+    
+        &__scrollbar {
+            width: 98%;
+            height: 0.2rem;
+    
+            .swiper-scrollbar-drag {
+                height: 0.4rem;
+            }
+        }
+        
+    }
+
+
+    .select {
+        width: 100%;
+
+        &__current {
+            font-size: 3rem;
+            padding-right: 2rem;
+        }
+    
+        &__item {
+            padding: 1.5rem;
+            font-size: 2.8rem;
+            height: 5rem;
+            color: rgba(41, 45, 50, 1);
+            cursor: pointer;
+        }
+    }
+}
